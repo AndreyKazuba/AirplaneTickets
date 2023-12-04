@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/spinner.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+    <title>Покупка</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="../img/logo.svg">
+            <p>Cheap Tickets</p>
+        </div>
+        <div class="nav">
+            <a href="../flights/index.html" class="nav-item">Рейсы</a>
+            <a href="../my-tickets/index.html" class="nav-item">Мои билеты</a>
+        </div>
+        <div class="exit" id="log-out">Выйти</div>
+    </div>
+    <div class="sub-header" id="sub-header">
+        <div class="flight-name" id="flight-name">--</div>
+        <div class="date-time" id="date-time">--</div>
+        <div class="company" id="company">--</div>
+        <div class="plane-name" id="plane-name">--</div>
+        <div class="seat" id="seat">--</div>
+    </div>
+    <div class="main" id="main">
+        <input type="text" id="first-name" placeholder="Имя">
+        <input type="text" id="last-name" placeholder="Фамилия">
+        <input type="text" placeholder="Номер карты">
+        <input type="password" placeholder="CVV код">
+        <div class="checkbox-group">
+            <input type="checkbox" id="baggage" onchange="oncheck()">
+            <span>Наличие багажа</span>
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="queue" onchange="oncheck()">
+            <span>Право первоочерёдной посадки</span>
+        </div>
+        <div class="buy-button" id="buy-button">
+            <span id="buy-text">Купить (<span id="price">--</span> BYN)</span>
+            <span class="s-spinner" id="s-spinner"></span>
+        </div>
+        <div class="error" id="error">Данный введены некорректно</div>
+    </div>
+</body>
+<script src="../scripts/header.js"></script>
+<script src="../scripts/navigation.js"></script>
+<script src="../scripts/http.js"></script>
+<script src="./script.js"></script>
+</html>

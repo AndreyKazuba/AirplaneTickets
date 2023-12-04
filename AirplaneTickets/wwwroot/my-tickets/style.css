@@ -1,0 +1,79 @@
+.main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.ticket {
+    background-color: #2b2b2b;
+    overflow: hidden;
+    border: solid 1px #404040;
+    border-radius: 8px;
+    transition: .4s;
+    padding: 12px;
+    display: grid;
+    flex-direction: column;
+    gap: 6px;
+    transition: transform 0.5s, opacity 0.6s;
+    transform: translateY(-30px);
+    opacity: 0;
+}
+
+.ticket > .flight::before {
+    content: 'Рейс: ';
+    font-size: 12px;
+    color: #949494;
+}
+
+.ticket > .company::before {
+    content: 'Компания: ';
+    font-size: 12px;
+    color: #949494;
+}
+
+.ticket > .seat::before {
+    content: 'Место: ';
+    font-size: 12px;
+    color: #949494;
+}
+
+.ticket > .date-time {
+    font-size: 15px;
+}
+
+.ticket > .date-time::before {
+    content: 'Время вылета: ';
+    font-size: 12px;
+    color: #949494;
+}
+
+.ticket > .first-name::before {
+    content: 'Имя: ';
+    font-size: 12px;
+    color: #949494;
+}
+
+.ticket > .last-name::before {
+    content: 'Фамилия: ';
+    font-size: 12px;
+    color: #949494;
+}
+
+.ticket > .qr-code {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.ticket > .qr-code > img {
+    width: 110px;
+    height: 110px;
+}
+
+@media (max-width: 400px) {
+    .main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

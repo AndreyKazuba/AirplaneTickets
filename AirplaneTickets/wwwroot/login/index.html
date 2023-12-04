@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/spinner.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+    <title>Войти</title>
+</head>
+<body>
+    <img src="../img/logo.svg">
+    <h1>Cheap Tickets</h1>
+    <div class="main">
+        <input type="text" id="login" placeholder="Логин">
+        <input type="password" id="password" placeholder="Пароль">
+        <div class="log-in-button" id="log-in-button">
+            <span id="login-text">Войти</span>
+            <span class="s-spinner" id="s-spinner"></span>
+        </div>
+        <div class="error" id="error">Неверный логин или пароль</div>
+    </div>
+    <p>Нет аккаунта? <a href="../register/index.html">Зарегистрироваться</a></p>
+</body>
+<script src="../scripts/http.js"></script>
+<script src="../scripts/navigation.js"></script>
+<script src="./script.js"></script>
+</html>

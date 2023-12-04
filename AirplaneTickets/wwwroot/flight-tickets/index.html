@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/scrollbar.css">
+    <link rel="stylesheet" href="../styles/spinner.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+    <title>Билеты</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="../img/logo.svg">
+            <p>Cheap Tickets</p>
+        </div>
+        <div class="nav">
+            <a href="../flights/index.html" class="nav-item">Рейсы</a>
+            <a href="../my-tickets/index.html" class="nav-item">Мои билеты</a>
+        </div>
+        <div class="exit" id="log-out">Выйти</div>
+    </div>
+    <div class="sub-header" id="sub-header">
+        <div class="flight-name" id="flight-name">--</div>
+        <div class="date-time" id="date-time">--</div>
+        <div class="company" id="company">--</div>
+        <div class="plane-name" id="plane-name">--</div>
+    </div>
+    <div class="main" id="main"></div>
+    <span class="spinner" id="spinner"></span>
+</body>
+<script src="../scripts/header.js"></script>
+<script src="../scripts/navigation.js"></script>
+<script src="../scripts/http.js"></script>
+<script src="./script.js"></script>
+</html>

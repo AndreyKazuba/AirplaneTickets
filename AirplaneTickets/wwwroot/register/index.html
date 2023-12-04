@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/spinner.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+    <title>Регистрация</title>
+</head>
+<body>
+    <img src="../img/logo.svg">
+    <h1>Cheap Tickets</h1>
+    <div class="main">
+        <input type="text" id="login" placeholder="Логин">
+        <input type="password" id="password" placeholder="Пароль">
+        <input type="password" id="passwordConfirmation" placeholder="Подтверждение пароля">
+        <div class="sign-up-button" id="sign-up-button">
+            <span id="sign-up-text">Зарегистрироваться</span>
+            <span class="s-spinner" id="s-spinner"></span>
+        </div>
+        <div class="error" id="userExist">Такой пользователь уже существует</div>
+        <div class="error" id="passwordConfimationFailed">Пароли не совпадают</div>
+        <div class="error" id="invalidData">Данные заполнены некорректно</div>
+    </div>
+    <p>Уже есть аккаунт? <a href="../login/index.html">Войти</a></p>
+</body>
+<script src="../scripts/http.js"></script>
+<script src="../scripts/navigation.js"></script>
+<script src="./script.js"></script>
+</html>

@@ -1,0 +1,61 @@
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.flight {
+    opacity: 0;
+    transform: translateY(-30px);
+    padding: 10px;
+    display: flex;
+    background-color: #2b2b2b;
+    border: solid 1px #404040;
+    gap: 16px;
+    border-radius: 8px;
+    transition: .4s;
+    cursor: pointer;
+    transition: transform 0.5s, opacity 0.6s;
+}
+
+.flight:hover {
+    background-color: #383838;
+}
+
+.flight p {
+    margin: 0;
+}
+
+.flight > .image {
+    height: 90px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flight > .image > img {
+    height: 70px;
+    width: 70px;
+}
+
+.flight .content {
+    padding: 5px;
+}
+
+.flight .content .name {
+    margin-top: 4px;
+}
+
+.flight .content .time {
+    font-size: 13px;
+    color: #959595;
+    margin-top: 2px;
+}
+
+@media (max-width: 400px) {
+    .main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

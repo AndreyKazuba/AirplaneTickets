@@ -1,0 +1,121 @@
+.sub-header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    gap: 20px;
+    background-color: #2b2b2b;
+    border-bottom: solid 1px #404040;
+    border-radius: 0 0 14px 14px;
+    position: sticky;
+    top: 50px;
+    z-index: 5;
+    transition: .6s;
+    transform: translateY(-50px);
+}
+
+.sub-header > * {
+    width: max-content;
+}
+
+.sub-header > .company::before {
+    content: 'Компания: ';
+    font-size: 12px;
+    color: #949494;
+}
+
+.sub-header > .flight-name::before {
+    content: 'Рейс: ';
+    font-size: 12px;
+    color: #949494;
+}
+
+.sub-header > .date-time::before {
+    content: 'Время вылета: ';
+    font-size: 12px;
+    color: #949494;
+}
+
+.sub-header > .plane-name::before {
+    content: 'Самолёт: ';
+    font-size: 12px;
+    color: #949494;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.ticket {
+    background-color: #2b2b2b;
+    overflow: hidden;
+    border: solid 1px #404040;
+    border-radius: 8px;
+    transition: .4s;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.6s;
+}
+
+.ticket > .seat, .ticket > .price {
+    margin: 10px;
+}
+
+.ticket > .seat::before {
+    content: 'Место: ';
+    font-size: 12px;
+    color: #949494;
+}
+
+.ticket > .price {
+    font-size: 14px;
+}
+
+.ticket > .price::before {
+    content: 'Цена: ';
+    font-size: 12px;
+    color: #949494;
+}
+
+.ticket > .buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    font-size: 14px;
+    margin-top: 5px;
+    background-color: #467951;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.ticket > .buy-button:hover {
+    background-color: rgba(70, 121, 81, 0.634);
+}
+
+.ticket > .sold {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    font-size: 14px;
+    margin-top: 5px;
+    background-color: rgb(121, 70, 70);
+    cursor: default;
+}
+
+@media (max-width: 400px) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sub-header {
+        height: fit-content;
+        align-items: start;
+        flex-wrap: wrap;
+        transform: translateY(-150px);
+    }
+}
